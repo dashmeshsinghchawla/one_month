@@ -40,12 +40,17 @@ body {
 
 .content{display:flex;flex-direction:column;align-items:center;}
 
-/* Background */
+/* Background (OPTIMIZED) */
 .story-bg{
-    position:absolute;inset:0;
-    background-size:cover;background-position:center;
-    filter:blur(20px);transform:scale(1.1);z-index:-2;
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    filter: blur(10px);
+    transform: scale(1.05);
+    z-index:-2;
 }
+
 .overlay{
     position:absolute;inset:0;
     background:rgba(0,0,0,0.5);z-index:-1;
@@ -58,11 +63,20 @@ img.main{
     margin-bottom:20px;
 }
 
-/* Text */
-p{line-height:1.8;margin:10px 0;}
-.lyric{font-style:italic;color:#ddd;}
+/* Text (RESPONSIVE) */
+p{
+    line-height:1.8;
+    margin:10px 0;
+    font-size: clamp(16px, 4vw, 20px);
+}
 
-/* MATCH WORD (UPDATED WITH STICK + FLAME ONLY) */
+.lyric{
+    font-style:italic;
+    color:#ddd;
+    font-size: clamp(14px, 3.5vw, 18px);
+}
+
+/* MATCH WORD (stick + flame) */
 .match-word {
     position: relative;
     display: inline-block;
@@ -74,7 +88,7 @@ p{line-height:1.8;margin:10px 0;}
     content: "";
     position: absolute;
     bottom: -2px;
-    right: -6px;
+    right: -12px;
     width: 2px;
     height: 16px;
     background: #c2a27a;
@@ -87,7 +101,7 @@ p{line-height:1.8;margin:10px 0;}
     content:"";
     position:absolute;
     top:-10px;
-    right:-8px;
+    right:-14px;
     width:8px;
     height:8px;
     background: orange;
@@ -96,8 +110,9 @@ p{line-height:1.8;margin:10px 0;}
     opacity:0;
 }
 
+/* smoother animation */
 .match-word.active::after {
-    animation: pulseGlow 1.5s infinite ease-in-out;
+    animation: pulseGlow 2.5s infinite ease-in-out;
 }
 
 @keyframes pulseGlow {
@@ -156,7 +171,7 @@ p{line-height:1.8;margin:10px 0;}
 <div class="content">
 <p>
 it started with just a 
-<span class="match-word">match</span><br><br>
+<span class="match-word">match</span>…<br><br>
 and somehow turned into this
 </p>
 </div>
@@ -174,14 +189,14 @@ and somehow turned into this
 <div class="story">
 <div class="story-bg" style="background-image:url('baradari.jpg')"></div>
 <div class="overlay"></div>
-
 <div class="content">
 <img class="main" src="baradari.jpg">
 
 <p>
 this place just feels different now…<br><br>
 
-
+not because of what it is,<br>
+but because of what it holds for us 🌳<br><br>
 
 we’ve sat here doing nothing,<br>
 talking about the most random things,<br>
