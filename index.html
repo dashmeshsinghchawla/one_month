@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>one month 🤍</title>
+
+<style>
+body {
+    margin:0;
+    background:black;
+    color:white;
+    font-family:-apple-system;
+    overflow:hidden;
+}
+
+/* Header */
+.header{
+    position:absolute;top:10px;left:15px;z-index:5;
+    display:flex;align-items:center;
+}
+.header img{
+    width:35px;height:35px;border-radius:50%;margin-right:10px;
+}
+
+/* Progress */
+.progress-container{
+    position:absolute;top:5px;left:10px;right:10px;
+    display:flex;gap:5px;z-index:5;
+}
+.progress{flex:1;height:3px;background:rgba(255,255,255,0.3);}
+.progress span{display:block;height:100%;width:0;background:white;}
+
+/* Story */
+.story{
+    position:absolute;width:100%;height:100%;
+    display:none;justify-content:center;align-items:center;
+    text-align:center;padding:25px;
+}
+.story.active{display:flex;}
+
+.content{display:flex;flex-direction:column;align-items:center;}
+
+/* Background */
+.story-bg{
+    position:absolute;inset:0;
+    background-size:cover;background-position:center;
+    filter:blur(20px);transform:scale(1.1);z-index:-2;
+}
+.overlay{
+    position:absolute;inset:0;
+    background:rgba(0,0,0,0.5);z-index:-1;
+}
+
+img.main{
+    width:80%;
+    max-height:50vh;
+    border-radius:16px;
+    margin-bottom:20px;
+}
+
+/* Text */
+p{line-height:1.8;margin:10px 0;}
+.lyric{font-style:italic;color:#ddd;}
+
+/* MATCH WORD (UPDATED WITH STICK + FLAME ONLY) */
+.match-word {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+/* stick */
+.match-word::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -6px;
+    width: 2px;
+    height: 16px;
+    background: #c2a27a;
+    border-radius: 2px;
+    transform: rotate(-20deg);
+}
+
+/* flame */
+.match-word::after {
+    content:"";
+    position:absolute;
+    top:-10px;
+    right:-8px;
+    width:8px;
+    height:8px;
+    background: orange;
+    border-radius:50%;
+    box-shadow:0 0 8px orange,0 0 18px orange;
+    opacity:0;
+}
+
+.match-word.active::after {
+    animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% {opacity:0.2; transform:scale(0.8);}
+    50% {opacity:1; transform:scale(1.3);}
+    100% {opacity:0.2; transform:scale(0.8);}
+}
+
+/* Button */
+.button{
+    margin-top:15px;
+    padding:12px 22px;
+    background:white;
+    color:black;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:20;
+}
+
+/* Tap */
+.tap-left,.tap-right{
+    position:absolute;top:0;width:50%;height:100%;z-index:10;
+}
+.tap-left{left:0;}
+.tap-right{right:0;}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<img src="photo1.jpg">
+<div>koala 🐨 & dory 🐟<br><span style="font-size:12px;color:#aaa;">1m ago</span></div>
+</div>
+
+<div class="progress-container">
+<div class="progress"><span></span></div>
+<div class="progress"><span></span></div>
+<div class="progress"><span></span></div>
+<div class="progress"><span></span></div>
+<div class="progress"><span></span></div>
+<div class="progress"><span></span></div>
+<div class="progress"><span></span></div>
+</div>
+
+<!-- STORIES -->
+
+<div class="story active">
+<div class="content">
+<p>one month of us… and counting 🤍</p>
+</div>
+</div>
+
+<div class="story">
+<div class="content">
+<p>
+it started with just a 
+<span class="match-word">match</span><br><br>
+and somehow turned into this
+</p>
+</div>
+</div>
+
+<div class="story">
+<div class="story-bg" style="background-image:url('photo1.jpg')"></div>
+<div class="overlay"></div>
+<div class="content">
+<img class="main" src="photo1.jpg">
+<p class="lyric">“all along there was some invisible string…”</p>
+</div>
+</div>
+
+<div class="story">
+<div class="story-bg" style="background-image:url('baradari.jpg')"></div>
+<div class="overlay"></div>
+
+<div class="content">
+<img class="main" src="baradari.jpg">
+
+<p>
+this place just feels different now…<br><br>
+
+
+
+we’ve sat here doing nothing,<br>
+talking about the most random things,<br>
+laughing over stupid stuff,<br>
+and somehow losing track of time…<br><br>
+
+it’s one of those places<br>
+where everything just feels calm<br>
+when it’s you and me there<br><br>
+
+and I think that’s why<br>
+it became one of our core memories
+</p>
+
+<p class="lyric">“I remember it all too well”</p>
+</div>
+</div>
+
+<div class="story">
+<div class="story-bg" style="background-image:url('photo2.jpg')"></div>
+<div class="overlay"></div>
+<div class="content">
+<img class="main" src="photo2.jpg">
+<p class="lyric">“do you remember…”</p>
+</div>
+</div>
+
+<div class="story">
+<div class="content">
+<p>
+I don’t want this to stop…<br><br>
+
+I just want more of this,<br>
+more of you,<br>
+more moments that turn into memories<br><br>
+
+the kind we’ll look back at<br>
+and smile without even realising it
+</p>
+
+<p class="lyric">“I have loved you for a thousand years…”</p>
+<p>for you, a thousand times over 🤍</p>
+</div>
+</div>
+
+<div class="story">
+<div class="content">
+
+<p id="loveLine"></p>
+
+<div class="button" onclick="reveal(event)">don’t click this 👀</div>
+
+<p id="revealText" style="opacity:0;margin-top:10px;">
+ABH KUCH ACHA SA BATA 😭
+</p>
+
+</div>
+</div>
+
+<!-- TAP -->
+<div class="tap-left" onclick="prev()"></div>
+<div class="tap-right" onclick="next()"></div>
+
+<!-- AUDIO -->
+<audio id="song0" src="perfect.mp3"></audio>
+<audio id="song1" src="song1.mp3"></audio>
+<audio id="song2" src="song2.mp3"></audio>
+<audio id="song3" src="song3.mp3"></audio>
+<audio id="song4" src="thousand.mp3"></audio>
+
+<script>
+let index=0;
+const stories=document.querySelectorAll(".story");
+const bars=document.querySelectorAll(".progress span");
+let timer, paused=false, currentAudio=null;
+
+const durations=[3000,4000,4000,4000,4000,5000,6000];
+
+function stopAudio(){
+    document.querySelectorAll("audio").forEach(a=>{
+        a.pause();
+        a.currentTime=0;
+    });
+    currentAudio=null;
+}
+
+function playMusic(i){
+    stopAudio();
+
+    if(i===1) currentAudio=song0;
+    if(i===2) currentAudio=song1;
+    if(i===3) currentAudio=song2;
+    if(i===4) currentAudio=song3;
+    if(i===5) currentAudio=song4;
+
+    if(currentAudio) currentAudio.play();
+
+    if(i===1){
+        setTimeout(()=>{
+            document.querySelector(".match-word").classList.add("active");
+        },500);
+    }
+
+    if(i===6){
+        typeLove();
+    }
+}
+
+function typeLove(){
+    let text="I LOVE YOU";
+    let i=0;
+    loveLine.innerHTML="";
+    let interval=setInterval(()=>{
+        if(paused) return;
+        loveLine.innerHTML+=text[i++];
+        if(i>=text.length) clearInterval(interval);
+    },120);
+}
+
+function show(i){
+    stories.forEach(s=>s.classList.remove("active"));
+    stories[i].classList.add("active");
+
+    bars.forEach((b,j)=>{
+        b.style.width=j<i?"100%":"0%";
+    });
+
+    playMusic(i);
+    startProgress(i);
+}
+
+function startProgress(i){
+    clearInterval(timer);
+    let width=0;
+    let step=durations[i]/100;
+
+    timer=setInterval(()=>{
+        if(paused) return;
+        width++;
+        bars[i].style.width=width+"%";
+        if(width>=100) next();
+    },step);
+}
+
+function next(){ if(index<stories.length-1){index++;show(index);} }
+function prev(){ if(index>0){index--;show(index);} }
+
+function pauseAll(){paused=true;if(currentAudio)currentAudio.pause();}
+function resumeAll(){paused=false;if(currentAudio)currentAudio.play();}
+document.addEventListener("mousedown",pauseAll);
+document.addEventListener("mouseup",resumeAll);
+document.addEventListener("touchstart",pauseAll);
+document.addEventListener("touchend",resumeAll);
+
+function reveal(e){
+    e.stopPropagation();
+    revealText.style.opacity=1;
+}
+
+show(0);
+</script>
+
+</body>
+</html>
